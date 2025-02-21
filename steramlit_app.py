@@ -15,7 +15,7 @@ def main():
     if st.button("Predict Survival"):
         user_data = pd.DataFrame([[pclass, 1 if sex == "Male" else 0, age, sibsp, parch, fare,
                                    1 if embarked == "Q" else 0, 1 if embarked == "S" else 0]],
-                                 columns=X.columns)
+                                 columns=features)
         user_data = scaler.transform(user_data)
         prediction = model.predict(user_data)
         st.write("Survived" if prediction[0] == 1 else "Did Not Survive")
