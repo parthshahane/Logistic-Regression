@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import pickle
-from sklearn.preprocessing import StandardScaler
 
 # Load trained model
 with open("logistic_model.pkl", "rb") as file:
