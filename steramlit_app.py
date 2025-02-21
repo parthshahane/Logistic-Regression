@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 def main():
     st.title("Titanic Survival Prediction")
