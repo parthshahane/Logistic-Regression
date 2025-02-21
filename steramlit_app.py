@@ -13,6 +13,7 @@ def main():
     fare = st.number_input("Fare", 0.0, 500.0, 50.0)
     embarked = st.selectbox("Embarked Port", ["C", "Q", "S"])
     if st.button("Predict Survival"):
+        features = ['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked']
         user_data = pd.DataFrame([[pclass, 1 if sex == "Male" else 0, age, sibsp, parch, fare,
                                    1 if embarked == "Q" else 0, 1 if embarked == "S" else 0]],
                                  columns=features)
